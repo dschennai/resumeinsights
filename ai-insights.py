@@ -121,7 +121,7 @@ if submitbtn:
         with st.spinner("Working on it..."):
             if uploadedresume is not None:
                 st.markdown("---")
-                result, response = ask_chat_api_3command(document_text, question)
+                result, response = ask_chat_api_3command(document_text, question, height=75)
                 s1,s2 = st.columns([2,2])
                 with s1:
                     text_input_container = st.empty()
@@ -132,7 +132,7 @@ if submitbtn:
                         st.info(t)
                 with s2:
                     text_input_container1 = st.empty()
-                    t1 = text_input_container1.text_area("Reference Sentence ", response)
+                    t1 = text_input_container1.text_area("Reference Sentence ", response, height=75)
                     if t1 != "":
                         st.subheader("Supporting Text from Resume")
                         text_input_container1.empty()
