@@ -130,10 +130,8 @@ if submitbtn:
                     t = text_input_container.text_area("Your Answer ", result)
                     if t != "":
                         text_input_container.empty()
-                        st.info(t)
-                    st.markdown("---")
+                        st.info(t)                    
                 with s2:
-                    st.markdown("temp")
                     text_input_container1 = st.empty()
                     t1 = text_input_container1.text_area("Reference Sentence ", response)
                     if t1 != "":
