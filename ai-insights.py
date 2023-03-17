@@ -1,8 +1,3 @@
-import subprocess
-
-# Upgrade pip
-subprocess.run(['pip', 'install', '--upgrade', 'pip'], check=True)
-import requests
 import json
 import streamlit as st
 from docx import Document
