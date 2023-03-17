@@ -1,6 +1,7 @@
 import os
 import openai
 
+openai.api_key=st.secrets["OPEN_AI_KEY"]
 
 class ChatApp:
     def __init__(self):
