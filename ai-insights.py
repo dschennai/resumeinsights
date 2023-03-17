@@ -1,13 +1,13 @@
+import subprocess
+
+# Upgrade pip
+subprocess.run(['pip', 'install', '--upgrade', 'pip'], check=True)
 import requests
 import json
 import streamlit as st
 from docx import Document
 import os
 from ChatApp import ChatApp
-import subprocess
-
-# Upgrade pip
-subprocess.run(['pip', 'install', '--upgrade', 'pip'], check=True)
 
 
 pdfapiurl = st.secrets["PDF_API_URL"]
