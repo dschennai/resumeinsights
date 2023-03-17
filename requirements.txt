@@ -1,2 +1,2 @@
 openai
-docx==0.8.10
+python-docx
