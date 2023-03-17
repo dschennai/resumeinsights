@@ -121,11 +121,11 @@ if submitbtn:
         with st.spinner("Working on it..."):
             if uploadedresume is not None:
                 st.markdown("---")
-                result, response = ask_chat_api_3command(document_text, question, height=75)
+                result, response = ask_chat_api_3command(document_text, question)
                 s1,s2 = st.columns([2,2])
                 with s1:
                     text_input_container = st.empty()
-                    t = text_input_container.text_area("Your Answer ", result)
+                    t = text_input_container.text_area("Your Answer ", result, height=75)
                     if t != "":
                         text_input_container.empty()
                         st.subheader("Answer")
