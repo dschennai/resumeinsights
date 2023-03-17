@@ -8,7 +8,6 @@ class ChatApp:
     def __init__(self):
         # Setting the API key to use the OpenAI API
         #openai.api_key = os.getenv("OPENAI_API_KEY")
-        openai.api_key = OPEN_AI_KEY
         self.messages = [
             {"role": "system", "content": "You are a content expert to help read and understand text and create articles."},
         ]
