@@ -5,6 +5,9 @@ from docx import Document
 import os
 from ChatApp import ChatApp
 
+pdfapiurl = st.secrets["PDF_API_URL"]
+pdfauthtoken = st.secrets["PDF_AUTH_TOKEN"]
+
 COMMAND_1= """I will present you with a candidate resume. Read and Memorize the Contents. I will be presenting you with some questions"""
 COMMAND_2="""store this question as A & Store the Answer as B"""
 COMMAND_3="""You answered to the question A as B, give me the supporting lines from the resume that made you come to this conclusion/result."""
@@ -42,12 +45,12 @@ def pdf_reader_using_api(pdf_file_name):
     # Set the headers for the API request
     headers = {
         'Content-Type': 'application/pdf',
-        'Authorization': f'Bearer {PDF_AUTH_TOKEN}'
+        'Authorization': f'Bearer {pdfauthtoken}'
     }
 
     # Send the API request with the PDF file data
     with open("data/"+pdf_file_name, 'rb') as pdf_file:
-        response = requests.post(PDF_API_URL, headers=headers, data=pdf_file)
+        response = requests.post(pdfapiurl, headers=headers, data=pdf_file)
 
     # Check the response status code
     if response.status_code == requests.codes.ok:
