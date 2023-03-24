@@ -108,6 +108,7 @@ with left:
             with st.spinner("Uploading..."):
                 save_file(uploadedresume)
                 document_text = pdf_reader_using_api(uploadedresume.name)
+                st.write(document_text)
 
     #st.write('<p style="font-size:22px; color:gray;">What specific knowledge or insights are you seeking? </p>',unsafe_allow_html=True)
     #question = st.text_input("text","", label_visibility="collapsed")
